@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Hi {{data.rstname}}</h1>
+<div mat-dialog-content>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Add a Tag line ?</mat-label>
+    <input matInput [(ngModel)]="data.tag">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.tag" cdkFocusInitial>Ok</button>
+</div>

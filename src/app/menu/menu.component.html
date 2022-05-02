@@ -1,0 +1,80 @@
+<mat-toolbar style="background-color: black;">
+    <span><a mat-icon-button routerLink="/home" style="color: white;font-size: medium;">
+        <span style="font-size:xx-large;color: lawngreen;">{{restrtnm | titlecase}}</span></a>
+    </span>
+</mat-toolbar>
+<p style="border: 2px lawngreen solid;"></p>
+<div class="container row">
+    <div class="col-md-3">
+        <form [formGroup]="additem">
+
+            <mat-form-field appearance="outline">
+                <mat-label class="fa fa-lock">Dishname</mat-label>
+                <input formControlName="Dishname" type="text" matInput />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label class="fa fa-lock">Dishprice</mat-label>
+                <input formControlName="Dishprice" type="number" matInput />
+            </mat-form-field>
+
+            <button *ngIf="!Enableupdate" mat-raised-button color="primary" (click)="adddata()" [disabled]="additem.invalid">Add Item</button>
+            <button *ngIf="Enableupdate" mat-raised-button color="primary" (click)="updatedata()" [disabled]="additem.invalid">Update Item</button>
+        </form>
+    </div>
+    <div class="col-md-9">
+        <div cdkDropListGroup>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="example-container">
+                        <h2>Menu Items</h2>
+                        <p style="border: 2px lawngreen solid;"></p>
+                        <div cdkDropList [cdkDropListData]="returnmenudata" class="example-list"
+                            (cdkDropListDropped)="drop($event)">
+                            <div class="example-box" *ngFor="let item of returnmenudata; let i = index" cdkDrag>{{item.dishname}}<br>
+                                {{item.dishprice}}
+                            
+                            <div class="box">
+                                <button mat-icon-button color="primary" (click)="Edititem(item)"><mat-icon>edit</mat-icon></button>
+                                <button mat-icon-button color="warn" (click)="deleteitem(item)"><mat-icon>delete</mat-icon></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="example-container">
+                        <h2>Orders<span *ngIf="orders.length>0"> {{orders.length}}</span></h2>
+                        <p style="border: 2px lawngreen solid;"></p>
+                        <div cdkDropList [cdkDropListData]="orders" class="example-list"
+                            (cdkDropListDropped)="drop($event)">
+                            <div class="example-box" *ngFor="let item of orders" cdkDrag>{{item.dishname}}<br>
+                            {{item.dishprice}}
+                            <div class="box">
+                                <button mat-icon-button color="warn" (click)="deleteitem(item)"><mat-icon>delete</mat-icon></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="example-container">
+                        <h2>Delivered<span *ngIf="delivers.length>0"> {{delivers.length}}</span></h2>
+                        <p style="border: 2px lawngreen solid;"></p>
+                        <div cdkDropList [cdkDropListData]="delivers" class="example-list"
+                            (cdkDropListDropped)="drop($event)">
+                            <div class="example-box" *ngFor="let item of delivers" cdkDrag>{{item.dishname}}<br>
+                            {{item.dishprice}}
+                            <div class="box">
+                                <button mat-icon-button color="accent"><mat-icon>check_circle</mat-icon></button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

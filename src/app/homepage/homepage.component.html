@@ -1,0 +1,27 @@
+<mat-toolbar style="background-color: black;">
+    <span><a mat-icon-button routerLink="/home" style="color: white;font-size: medium;">
+        <span style="font-size:xx-large;color: lawngreen;">R</span>estaurants</a>
+    </span>
+</mat-toolbar>
+<p style="border: 2px lawngreen solid;"></p>
+<div class="container" >
+    <mat-card style="margin-top: 30px;border: lawngreen 1px solid;">
+        <mat-form-field appearance="outline">
+            <mat-label>Add your Tag Line??
+            <mat-icon matsuffix>sentiment_very_satisfied</mat-icon></mat-label>
+            <input matInput [(ngModel)]="tagline">
+        </mat-form-field>
+        
+        <span (click)=Onselect(r) *ngFor="let r of restaurants" style="padding: 1%;">
+            <button mat-raised-button style="background-color: lawngreen;">{{r.restaurantname | titlecase}}</button>
+        </span>
+    </mat-card>
+</div>
+<div class="container row" style="margin-left:50px">
+    <div class="col-md-6" >
+        <app-details [parentData]="parentdata"></app-details>
+    </div>
+    <div class="col-md-6" >
+        <app-addrestaurant></app-addrestaurant>
+    </div>
+</div>

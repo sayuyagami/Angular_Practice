@@ -1,0 +1,77 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "restaurantname": "Swagath",
+      "tag": null
+    },
+    {
+      "id": 2,
+      "restaurantname": "Kritunga",
+      "tag": "Meals & desserts"
+    },
+    {
+      "id": 3,
+      "restaurantname": "PistaHouse",
+      "tag": "softdrinks available"
+    },
+    {
+      "restaurantname": "Bawarchi",
+      "tag": "Delicious food available",
+      "id": 4
+    }
+  ],
+  "menu": [
+    {
+      "restaurantname": "Swagath",
+      "dishname": "Biryani",
+      "dishprice": 550,
+      "id": 1
+    },
+    {
+      "restaurantname": "Swagath",
+      "dishname": "pizza",
+      "dishprice": 80,
+      "id": 2
+    },
+    {
+      "id": 4,
+      "restaurantname": "Kritunga",
+      "dishname": "Burger",
+      "dishprice": 120
+    },
+    {
+      "restaurantname": "Swagath",
+      "dishname": "Burger",
+      "dishprice": 100,
+      "id": 5
+    },
+    {
+      "restaurantname": "Swagath",
+      "dishname": "French Fries",
+      "dishprice": 90,
+      "id": 6
+    },
+    {
+      "restaurantname": "Kritunga",
+      "dishname": "Biryani",
+      "dishprice": 250,
+      "id": 7
+    },
+    {
+      "restaurantname": "PistaHouse",
+      "dishname": "Chicken fried rice",
+      "dishprice": 350,
+      "id": 8
+    },
+    {
+      "restaurantname": "Swagath",
+      "dishname": "Paneer Butter Masala",
+      "dishprice": 150,
+      "id": 9
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

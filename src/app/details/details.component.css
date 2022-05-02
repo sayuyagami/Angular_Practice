@@ -1,0 +1,23 @@
+#fixed-content {
+    top: 44%;
+    bottom:3%;
+    width: 40%;
+    position:fixed;
+    overflow-y:scroll;
+  }
+
+  #fixed-content::-webkit-scrollbar {
+    display: none; 
+  }
+
+  :host .mat-card{
+    transition: 0.3 ease-in-out;
+  
+  }
+  :host .mat-card:hover{
+   
+    background-color: rgb(215, 241, 209);
+    transition: 0.3 ease-in-out;
+    transform:scale(0.9);
+    
+  }

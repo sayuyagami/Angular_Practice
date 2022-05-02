@@ -1,0 +1,52 @@
+
+.form-box{ 
+    margin-left: 25%; 
+    width: 550px; 
+    text-align: center; 
+    background-image: linear-gradient( rgba(234, 241, 232, 0.993),rgb(203, 218, 233)); 
+    border-radius: 30px; 
+    padding: 20px; 
+    padding-top: 2px;
+    } 
+    #head{ 
+      padding-top: 20px; 
+      text-align: center; 
+       
+    } 
+    .animate__bounce {
+        --animate-duration: 2s;
+      }
+    
+    .full-width{ 
+        width: 95%; 
+      } 
+ 
+      .submit-btn{ 
+        margin-left: 35px; 
+        height: 40px; 
+        width: 80%; 
+        margin-left: 10%; 
+        background: linear-gradient(to left, #242524,#455ff3); 
+    } 
+    .submit-btn:hover{ 
+      width:80%;background: linear-gradient(to right, #020202,#2657b3); 
+      box-shadow:0 20px 9px #1d1e1f1f; 
+    } 
+    ::ng-deep .custom-snackbar { 
+        margin: 0 !important; 
+        position: absolute; 
+        left: 40%; 
+        color: white; 
+        background: #007c15; 
+        top: 60px; 
+         
+      } 
+      ::ng-deep .red-snackbar { 
+        left: 35%; 
+        margin: 0 !important; 
+        position: absolute; 
+        color: white; 
+        background: linear-gradient(to right, #303130,#fd0000); 
+        top: 60px; 
+       
+      }

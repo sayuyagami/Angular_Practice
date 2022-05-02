@@ -1,0 +1,25 @@
+<div class="container">
+    <span style="padding: 1%;">
+        <div>
+
+            <p><b>Restaurant name : </b>
+                <i>{{parentdata.restaurantname}}</i><br>
+                <b>Tag Line : </b>
+                <i>{{parentdata.tag}}</i>
+                <button mat-raised-button (click)="reload()" style="float: right;">Add Tag</button>
+            </p>
+        </div>
+    </span>
+    <span  id="fixed-content" style="margin-top: 35px;">
+<div *ngFor="let r of rstrts;" style="cursor: pointer;">
+        <mat-card (click)="onselect(r)"  style="padding: 5%;border-radius: 10px;">
+            
+            <mat-card-title>{{r.restaurantname | titlecase}}</mat-card-title>
+            <mat-card-subtitle>{{r.tag}}</mat-card-subtitle>
+            
+            <!-- <p style="border: 2px rgb(109, 216, 125) solid;"></p> -->
+        
+    </mat-card><br>
+    </div>
+</span>
+</div>

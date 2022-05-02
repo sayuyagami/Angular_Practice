@@ -1,0 +1,33 @@
+
+<div class="form-box">
+    <h2 id="head"><span style="color: blue;font-size: xx-large;" class="animate__animated animate__bounce">S</span>ign In</h2>
+    <p style="color: red;padding:3px">{{errormsg}}</p>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="container">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label class='fa fa-envelope'>Email</mat-label>
+                <input [(ngModel)]="credentials.useremail" required name="useremail" type="text" matInput />
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label class="fa fa-lock">Password</mat-label>
+
+                <input [(ngModel)]="credentials.password" required [type]="showPassword ? 'text' : 'password'"
+                    name="password" matInput>
+                <mat-icon (click)="togglePasswordVisibility()" matSuffix>
+                    {{showPassword?'visibility_off':'visibility'}}
+                </mat-icon>
+            </mat-form-field>
+
+            <button type="submit" mat-raised-button color="primary">Login</button>&nbsp;
+            <button type="submit" mat-raised-button color="accent" click="onselect()">Reset</button>
+            </div>
+        </form>
+        New User ? <a mat-icon-button routerLink="/register" style="color: blue;">Sign Up</a>
+    </div>
+
+    <!--  {{credentials | json}}-->
+
+
+<!--</div>-->

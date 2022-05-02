@@ -1,0 +1,15 @@
+/* :host .mat-form-field{
+    
+} */
+.flexcontainer{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.fcontainer{
+    display: flex;
+    flex-direction: row;
+}
+#fitem{
+  width: 100px;
+  height: 100px;
+}

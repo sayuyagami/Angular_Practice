@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <mat-card style="margin-top: 60px;background-color: rgb(215, 241, 209);">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Add New Restaurant
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Restaurant Name</mat-label>
+        <input matInput [(ngModel)]="restrtname">
+      </mat-form-field><br>
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Add your Tag Line??</mat-label>
+        <input matInput [(ngModel)]="tagline">
+      </mat-form-field><br>
+      <button mat-raised-button (click)="Onclick()" style="background-color: black;color:white;">Add Restaurant</button>
+    </mat-expansion-panel>
+  </mat-card>
+  
+</div>

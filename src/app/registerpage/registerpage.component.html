@@ -1,0 +1,128 @@
+
+<div class="form-box">
+    <h2 id="head"><span style="color: blue;font-size: xx-large;" class="animate__animated animate__bounce">S</span>ign Up</h2>
+    <form [formGroup]="userregister" (ngSubmit)="senduserdata()">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="fa fa-lock">FirstName</mat-label>
+                        <input formControlName="firstname" type="text" matInput />
+                    </mat-form-field>
+                
+                <span 
+                    *ngIf="userregister.controls['firstname'].touched && userregister.hasError('required','firstname')"
+                    class="text-danger">
+                    *firstname required!!
+                </span>
+            </div>
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="fa fa-lock">LastName</mat-label>
+                        <input formControlName="lastname" type="text" matInput />
+                    </mat-form-field>
+                
+                <span style="margin-left: 80px;"
+                    *ngIf="userregister.controls['lastname'].touched && userregister.hasError('required','lastname')"
+                    class="text-danger">
+                    *lastname required!!
+                </span>
+                <span style="margin-left: 80px;"
+                    *ngIf="userregister.controls['lastname'].dirty && userregister.controls['lastname'].errors"
+                    class="text-danger">firstname and lastname should no match</span>
+                </div>
+            </div>
+            <div>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input formControlName="username" type="text" matInput />
+            </mat-form-field>
+            <span class="text-danger" 
+                *ngIf="userregister.controls['username'].dirty && userregister.hasError('minlength','username')">
+                Name must be at least 4 characters long.
+            </span>
+            <span 
+                *ngIf="userregister.controls['username'].touched && userregister.hasError('required','username')"
+                class="text-danger">
+                *Username required!!
+            </span>
+            <span  *ngIf="userregister.controls['username'].errors?.['forbidname']"
+                class="text-danger">
+                *Username not allowed!!
+            </span>
+        </div>
+        <div>
+            <mat-label style="margin-right: 150px;">Gender</mat-label>
+            <span style="margin-left: 50px;" *ngFor="let g of genderlst">
+                <input type="radio" formControlName="gender" value="{{g}}" (change)="radioChangeHandler($event)">
+                <label>{{g}}</label>
+            </span>
+</div>
+<div>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label class='fa fa-envelope'>Email Id</mat-label>
+                <input formControlName="email" type="email" matInput />
+            </mat-form-field>
+            <span 
+                *ngIf="userregister.controls['email'].touched && userregister.hasError('required','email')"
+                class="text-danger">
+                *Email required!!
+            </span>
+            <span 
+                *ngIf="userregister.controls['email'].dirty && userregister.hasError('pattern','email')"
+                class="text-danger">
+                *Please follow email format
+            </span>
+            <div *ngIf="userregister.controls['email'].touched && userregister.controls['email'].dirty">
+                <span  *ngIf="userregister.controls['email'].errors?.['emailDomain']"
+                    class="text-danger">
+                    *Email invalid!!
+                </span>
+            </div>
+</div>
+<div>
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label class="fa fa-lock">Mobile No</mat-label>
+                <input formControlName="phnnum" type="tel" matInput />
+            </mat-form-field>
+            <span 
+                *ngIf="userregister.controls['phnnum'].dirty && userregister.hasError('minlength','phnnum')"
+                class="text-danger">*phone number must have 10 digits!!</span>
+            <span 
+                *ngIf="userregister.controls['phnnum'].dirty && userregister.hasError('maxlength','phnnum')"
+                class="text-danger">*phone number exceeded 10 digits!!</span>
+            <div *ngIf="userregister.controls['phnnum'].touched && userregister.controls['phnnum'].dirty">
+                <span *ngIf="userregister.controls['phnnum'].errors?.['notvalidnumber']"
+                    class="text-danger">
+                    *Invalid Mobile number!!
+                </span>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="fa fa-lock">Password</mat-label>
+                        <input formControlName="password" type="password" matInput />
+                    </mat-form-field>
+                    
+                </div>
+
+                <div class="col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="fa fa-lock">Confirm Password</mat-label>
+                        <input formControlName="confirmpassword" type="password" matInput />
+                    </mat-form-field>
+                </div>
+                <span 
+                    *ngIf="userregister.controls['confirmpassword'].dirty && userregister.controls['confirmpassword'].errors"
+                    class="text-danger">password didn't match</span>
+            </div>
+            <div class="cotainer row">
+                <button style="color: white;" mat-raised-button type="submit" class="submit-btn">Register</button>
+            </div>
+        </div>
+        Already a User ? <a mat-icon-button routerLink="/login" style="color: blue;">Sign In</a>
+    </form>
+    <!--{{userregister.value | json}}-->
+</div>  
