@@ -3,7 +3,7 @@
     {
       "id": 1,
       "restaurantname": "Swagath",
-      "tag": null
+      "tag": "Foodi world"
     },
     {
       "id": 2,
@@ -19,6 +19,11 @@
       "restaurantname": "Bawarchi",
       "tag": "Delicious food available",
       "id": 4
+    },
+    {
+      "restaurantname": "Paradise",
+      "tag": "famous place",
+      "id": 5
     }
   ],
   "menu": [
@@ -61,7 +66,7 @@
     {
       "restaurantname": "PistaHouse",
       "dishname": "Chicken fried rice",
-      "dishprice": 350,
+      "dishprice": 300,
       "id": 8
     },
     {
@@ -69,6 +74,18 @@
       "dishname": "Paneer Butter Masala",
       "dishprice": 150,
       "id": 9
+    },
+    {
+      "restaurantname": "Kritunga",
+      "dishname": "pizza",
+      "dishprice": 80,
+      "id": 10
+    },
+    {
+      "restaurantname": "Paradise",
+      "dishname": "Pizza",
+      "dishprice": 100,
+      "id": 11
     }
   ],
   "profile": {

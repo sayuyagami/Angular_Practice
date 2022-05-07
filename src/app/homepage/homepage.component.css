@@ -1,15 +1,45 @@
-/* :host .mat-form-field{
-    
-} */
-.flexcontainer{
-    display: flex;
-    flex-direction: row-reverse;
+/* @media (min-width: 300px){
+  #homecomp{
+    overflow-y: scroll
+  }
+  #homecomp::-webkit-scrollbar {
+    display: none;
+  }
 }
-.fcontainer{
-    display: flex;
-    flex-direction: row;
+@media (min-width: 576px){
+  #homecomp{
+   
+    overflow-y: scroll
 }
-#fitem{
-  width: 100px;
-  height: 100px;
+#homecomp::-webkit-scrollbar {
+  display: none;
 }
+
+}
+@media (min-width: 768px){
+  #homecomp{
+    overflow-y: scroll
+}
+#homecomp::-webkit-scrollbar {
+  display: none;
+}
+}
+
+@media (min-width: 992px) {
+  #homecomp{
+    overflow-y: scroll
+}
+#homecomp::-webkit-scrollbar {
+  display: none;
+}
+}
+
+@media (min-width: 1200px){
+  #homecomp{
+    overflow-y: scroll
+}
+#homecomp::-webkit-scrollbar {
+  display: none;
+}
+}
+ */

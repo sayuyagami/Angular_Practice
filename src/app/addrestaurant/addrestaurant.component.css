@@ -2,10 +2,10 @@
     width: 95%; 
   } 
   ::ng-deep .red-snackbar { 
-    left: 55%; 
     margin: 0 !important; 
     position: absolute; 
     color: white; 
     background-color: #fd0000; 
     top: 250px; 
   }
+ 

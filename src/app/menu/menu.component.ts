@@ -13,6 +13,7 @@ import { ApiService } from '../services/api.service';
 export class MenuComponent implements OnInit {
   additem!:FormGroup;
   public restrtnm:string=''
+  public storemenulst=[] as any;
   menudata={
     'restaurantname':'',
     'dishname':'',
@@ -20,11 +21,11 @@ export class MenuComponent implements OnInit {
   }
 
   Enableupdate=false
-  public storemenulst=[] as any;
+  
   public returnmenudata: menumodel[] = [];
   public orders:menumodel[]=[] ;
   public delivers:menumodel[]=[]
-  fetchdetails: any
+  
   itemid:number=0
   
   constructor(private route:ActivatedRoute,private service:ApiService,private fb:FormBuilder) { }
@@ -38,7 +39,7 @@ export class MenuComponent implements OnInit {
     }),
    
     this.service.getmenudata().subscribe( data => {
-      this.storemenulst = [...data];
+      this.storemenulst = data;
       this.returnmenudata=this.storemenulst.filter((e: { restaurantname: any; }) => e.restaurantname ==  this.restrtnm)
      
   })

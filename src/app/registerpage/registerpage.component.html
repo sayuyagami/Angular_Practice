@@ -1,12 +1,15 @@
-
+<div class="container">
+<div class="d-flex flex-wrap justify-content-center">
 <div class="form-box">
     <h2 id="head"><span style="color: blue;font-size: xx-large;" class="animate__animated animate__bounce">S</span>ign Up</h2>
     <form [formGroup]="userregister" (ngSubmit)="senduserdata()">
 
         <div class="container">
+           
             <div class="row">
+                
                 <div class="col-md-6">
-                    <mat-form-field appearance="outline">
+                    <mat-form-field class="full-width" appearance="outline">
                         <mat-label class="fa fa-lock">FirstName</mat-label>
                         <input formControlName="firstname" type="text" matInput />
                     </mat-form-field>
@@ -17,8 +20,8 @@
                     *firstname required!!
                 </span>
             </div>
-                <div class="col-md-6">
-                    <mat-form-field appearance="outline">
+                <div  class="col-md-6">
+                    <mat-form-field class="full-width" appearance="outline">
                         <mat-label class="fa fa-lock">LastName</mat-label>
                         <input formControlName="lastname" type="text" matInput />
                     </mat-form-field>
@@ -31,9 +34,10 @@
                 <span style="margin-left: 80px;"
                     *ngIf="userregister.controls['lastname'].dirty && userregister.controls['lastname'].errors"
                     class="text-danger">firstname and lastname should no match</span>
-                </div>
+                </div> 
             </div>
             <div>
+            
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Username</mat-label>
                 <input formControlName="username" type="text" matInput />
@@ -53,11 +57,13 @@
             </span>
         </div>
         <div>
-            <mat-label style="margin-right: 150px;">Gender</mat-label>
-            <span style="margin-left: 50px;" *ngFor="let g of genderlst">
+           <div class="form-input" >
+            <mat-label style="margin-right: 90px;">Gender</mat-label>
+            <span *ngFor="let g of genderlst">
                 <input type="radio" formControlName="gender" value="{{g}}" (change)="radioChangeHandler($event)">
-                <label>{{g}}</label>
+                <label>{{g}}</label>&nbsp;
             </span>
+       </div>
 </div>
 <div>
             <mat-form-field class="full-width" appearance="outline">
@@ -101,7 +107,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <mat-form-field appearance="outline">
+                    <mat-form-field class="full-width" appearance="outline">
                         <mat-label class="fa fa-lock">Password</mat-label>
                         <input formControlName="password" type="password" matInput />
                     </mat-form-field>
@@ -109,7 +115,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <mat-form-field appearance="outline">
+                    <mat-form-field class="full-width" appearance="outline">
                         <mat-label class="fa fa-lock">Confirm Password</mat-label>
                         <input formControlName="confirmpassword" type="password" matInput />
                     </mat-form-field>
@@ -126,3 +132,5 @@
     </form>
     <!--{{userregister.value | json}}-->
 </div>  
+</div>
+</div>

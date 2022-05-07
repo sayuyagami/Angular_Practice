@@ -23,11 +23,12 @@ import { DialogboxComponent } from './dialogbox/dialogbox.component';
 import { AddrestaurantComponent } from './addrestaurant/addrestaurant.component';
 import { MenuComponent } from './menu/menu.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({ 
   declarations: [ 
     AppComponent, 
-    RegisterpageComponent, LoginpageComponent, HomepageComponent, DetailsComponent, DialogboxComponent, AddrestaurantComponent, MenuComponent 
+    RegisterpageComponent, LoginpageComponent, HomepageComponent, DetailsComponent, DialogboxComponent, AddrestaurantComponent, MenuComponent, HeaderComponent 
   ], 
   imports: [ 
     BrowserModule, 

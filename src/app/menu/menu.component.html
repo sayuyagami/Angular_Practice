@@ -1,12 +1,12 @@
-<mat-toolbar style="background-color: black;">
-    <span><a mat-icon-button routerLink="/home" style="color: white;font-size: medium;">
-        <span style="font-size:xx-large;color: lawngreen;">{{restrtnm | titlecase}}</span></a>
-    </span>
-</mat-toolbar>
+
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home"><span style="font-size:xx-large;color: lawngreen;margin-left: 20px;">{{restrtnm | titlecase}}</span></a>
+</nav>
+
 <p style="border: 2px lawngreen solid;"></p>
-<div class="container row">
+<div class="container row" style="margin-top: 75px;">
     <div class="col-md-3">
-        <form [formGroup]="additem">
+        <form [formGroup]="additem" style="padding: 10px;">
 
             <mat-form-field appearance="outline">
                 <mat-label class="fa fa-lock">Dishname</mat-label>
