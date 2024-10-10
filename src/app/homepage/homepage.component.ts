@@ -34,12 +34,18 @@ export class HomepageComponent implements OnInit {
   }
 
   Onselect(r:any){
-    this.tag=this.tagline
+    //this.tag=this.tagline
     this.parentdata.id=r.id
     this.parentdata.restaurantname=r.restaurantname
-    this.parentdata.tag=this.tagline
+    this.parentdata.tag=r.tag
     //this.restdata.updaterest(r.id,this.parentdata).subscribe();
     //location.reload()
+  }
+
+  reload(){
+    this.parentdata.tag = this.tagline
+    this.restdata.updaterest(this.parentdata.id,this.parentdata).subscribe();
+    location.reload()
   }
   // openDialog(): void {
   //   const dialogRef = this.dialog.open(DialogboxComponent, {

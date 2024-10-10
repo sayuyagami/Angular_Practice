@@ -19,10 +19,6 @@ export class DetailsComponent implements OnInit {
    this.apiservice.getrestaurantnames().subscribe(data=>this.rstrts=data.reverse())
   }
  
-  reload(){
-    this.apiservice.updaterest(this.parentdata.id,this.parentdata).subscribe();
-    location.reload()
-  }
   onselect(r:any){
     this.route.navigate(['/menu',r.restaurantname])
   }

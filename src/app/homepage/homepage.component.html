@@ -11,6 +11,7 @@
             <mat-icon matsuffix>sentiment_very_satisfied</mat-icon></mat-label>
             <input matInput [(ngModel)]="tagline">
         </mat-form-field>
+        <button mat-raised-button (click)="reload()" style="float: right;">Add Tag</button>
         <div class="d-flex flex-wrap-reverse">
         <span (click)=Onselect(r) *ngFor="let r of restaurants" style="padding: 1%;">
             <button mat-raised-button style="background-color: lawngreen;">{{r.restaurantname | titlecase}}</button>
